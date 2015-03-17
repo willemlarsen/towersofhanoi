@@ -4,7 +4,10 @@ end
 
 def move_n_discs(n, from_to)
   return [from_to] if n == 1
-  [{from: 1, to: 2},
-  {from: 1, to: 3},
-  {from: 2, to: 3}]
+
+  oneLessThatIsCurrentlyOne = n - 1 # equals one because test n = 2
+
+  move_n_discs(oneLessThatIsCurrentlyOne, {from: 1, to: 2}) + # [{from: 1, to: 2}]
+  move_n_discs(1, {from: 1, to: 3}) +                         # [{from: 1, to: 3}]
+  move_n_discs(oneLessThatIsCurrentlyOne, {from: 2, to: 3})   # [{from: 2, to: 3}]
 end
