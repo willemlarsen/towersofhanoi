@@ -13,5 +13,6 @@ def move_n_discs(n, from_to)
 end
 
 def getSparePeg(from_to)
-  2
+ mentioned_pegs = from_to.values
+ ([1, 2, 3] - mentioned_pegs).first
 end

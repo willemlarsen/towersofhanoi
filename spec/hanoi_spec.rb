@@ -12,3 +12,9 @@ describe "A solver for the Towers Of Hanoi problem" do
       {from: 2, to: 3}])
   end
 end
+
+describe "getSparePeg function" do
+  it "returns the (spare) peg not mentionned as 'from peg' or 'to peg'" do
+    expect(getSparePeg({from: 1, to: 2})).to eq(3)
+  end
+end
