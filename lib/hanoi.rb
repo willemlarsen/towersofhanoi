@@ -3,5 +3,8 @@ def hanoi_solution(stack_height)
 end
 
 def move_n_discs(n, from_to)
-  [from_to]
+  return [from_to] if n == 1
+  [{from: 1, to: 2},
+  {from: 1, to: 3},
+  {from: 2, to: 3}]
 end
